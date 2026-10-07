@@ -7,9 +7,11 @@
 #define SCL_PIN 9
 #define JRK_ADDRESS 11
 
-// 30mm stroke = 0-4095
-#define RETRACT_TARGET 566
-#define EXTEND_TARGET 3296
+#define RETRACT_TARGET 200
+#define EXTEND_TARGET 3200
+
+#define POSITION_TOLERANCE 40
+#define MOVE_TIMEOUT 5000
 
 void linearActuatorInit();
 void linearActuator(int target);

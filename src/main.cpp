@@ -4,8 +4,6 @@
 #include "linearActuator.h"
 
 void setup() {
-  Serial.begin(115200);
-  delay(1000);
   stepperInit();
   solenoidInit();
   linearActuatorInit();
@@ -27,12 +25,10 @@ void loop() {
   // isSolenoidOn = true;
   // }
 
-  linearActuator(RETRACT_TARGET);
-  delay(3000);
   linearActuator(EXTEND_TARGET);
-  delay(3000);
+  delay(2000);
   linearActuator(RETRACT_TARGET);
-  delay(3000);
+  delay(2000);
 
 
 
